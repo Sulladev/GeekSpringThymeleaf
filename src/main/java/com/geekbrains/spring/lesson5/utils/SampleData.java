@@ -37,6 +37,7 @@ public class SampleData {
 
         Customer customer1 = new Customer("Alex");
         Customer customer2 = new Customer("Alena");
+        Customer customer3 = new Customer("Tom");
 
         Order order1 = new Order();
         order1.setCurrentPrice(product1.getPrice());
@@ -50,6 +51,42 @@ public class SampleData {
         order2.setProduct(product2);
         order2.setCode("0002");
 
+        Order order3 = new Order();
+        order3.setCurrentPrice(product4.getPrice());
+        order3.setCustomer(customer3);
+        order3.setProduct(product4);
+        order3.setCode("0003");
+
+        Order order4 = new Order();
+        order4.setCurrentPrice(product8.getPrice());
+        order4.setCustomer(customer3);
+        order4.setProduct(product8);
+        order4.setCode("0004");
+
+        Order order5 = new Order();
+        order5.setCurrentPrice(product7.getPrice());
+        order5.setCustomer(customer2);
+        order5.setProduct(product7);
+        order5.setCode("0005");
+
+        Order order6 = new Order();
+        order6.setCurrentPrice(product5.getPrice());
+        order6.setCustomer(customer2);
+        order6.setProduct(product5);
+        order6.setCode("0006");
+
+        Order order7 = new Order();
+        order7.setCurrentPrice(product4.getPrice());
+        order7.setCustomer(customer1);
+        order7.setProduct(product4);
+        order7.setCode("0007");
+
+        Order order8 = new Order();
+        order8.setCurrentPrice(product1.getPrice());
+        order8.setCustomer(customer3);
+        order8.setProduct(product1 );
+        order8.setCode("0008");
+
         productRepository.save(product1);
         productRepository.save(product2);
         productRepository.save(product3);
@@ -61,9 +98,16 @@ public class SampleData {
 
         customerRepository.save(customer1);
         customerRepository.save(customer2);
+        customerRepository.save(customer3);
 
         orderRepository.save(order1);
         orderRepository.save(order2);
+        orderRepository.save(order3);
+        orderRepository.save(order4);
+        orderRepository.save(order5);
+        orderRepository.save(order6);
+        orderRepository.save(order7);
+        orderRepository.save(order8);
 
     }
 }
