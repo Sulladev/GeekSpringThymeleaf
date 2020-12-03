@@ -30,7 +30,7 @@ public class ProductController {
     public String showAllProducts(Model model,
                                   @RequestParam(defaultValue = "1", name = "p") Integer page,
                                   @RequestParam Map<String, String> params
-                                  ) {
+    ) {
         if (page < 1) {
             page = 1;
         }
@@ -44,9 +44,7 @@ public class ProductController {
     }
 
     @GetMapping("/add")
-    public String addProduct(
-            Model model
-    ) {
+    public String addProduct(Model model) {
         model.addAttribute("product", new Product());
         return "product_add_form";
     }

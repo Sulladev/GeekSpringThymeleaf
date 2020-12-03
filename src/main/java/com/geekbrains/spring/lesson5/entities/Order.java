@@ -25,6 +25,16 @@ public class Order {
     @Column(name = "current_Price")
     private int currentPrice;
 
+    public Order() {
+    }
+
+    public Order(String code, Customer customer, Product product, int currentPrice) {
+        this.code = code;
+        this.customer = customer;
+        this.product = product;
+        this.currentPrice = currentPrice;
+    }
+
     public String getCode() {
         return code;
     }
